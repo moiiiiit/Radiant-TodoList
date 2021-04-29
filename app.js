@@ -31,6 +31,4 @@ app.post("/postNewTodo", (request, response) => {
     response.status(201).json(newTodo);
   });
 
-app.listen(port, function () {
-  console.log("Radiant listening on port 9505!");
-});
+app.listen(process.env.PORT || 3000);
