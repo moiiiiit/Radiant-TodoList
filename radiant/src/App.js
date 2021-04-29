@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button } from 'antd';
+import './App.less';
 import './App.css';
+import Home from './pages/home';
 
 const App = () => (
   <div className="App">
-    <Button type="primary">Add task</Button>
+    <Home/>
   </div>
 );
 
