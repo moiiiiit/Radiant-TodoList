@@ -41,14 +41,14 @@ class Home extends React.Component {
   };
 
   async getComplete() {
-    const response = await fetch("http://127.0.0.1:9505/getComplete");
+    const response = await fetch("https://radiant-todo.herokuapp.com/getComplete");
     const data = await response.json();
     console.log(data);
     this.setState({ completed: data });
   }
 
   async getTodos() {
-    const response = await fetch("http://127.0.0.1:9505/getTodos");
+    const response = await fetch("https://radiant-todo.herokuapp.com/getTodos");
     const data = await response.json();
     this.setState({ todo: data });
   }
@@ -62,7 +62,7 @@ class Home extends React.Component {
       body: JSON.stringify(todo),
     };
     const response = await fetch(
-      "http://127.0.0.1:9505/postNewTodo",
+      "https://radiant-todo.herokuapp.com/postNewTodo",
       requestOptions
     );
     const data = await response.json();
